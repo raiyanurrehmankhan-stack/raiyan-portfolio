@@ -1,0 +1,223 @@
+const portfolioData = {
+  "basics": {
+    "name": "Raiyan Ur Rehman Khan",
+    "shortName": "Raiyan",
+    "label": "Aspiring Cybersecurity Professional & Digital Marketer",
+    "headline": "Digital Marketer | Social Media & Paid Ads | BSCS Student | Content Creation",
+    "summary": "BSCS Student based in Karachi, Pakistan with an active interest in cybersecurity and practical experience in digital marketing.",
+    "location": {
+      "country": "Pakistan",
+      "countryCode": "PK",
+      "region": "Karachi"
+    },
+    "email": "raiyanurrehmankhan@gmail.com",
+    "availability": "BSCS Student • Open to Opportunities",
+    "leadershipNote": "A motivated and proactive student with strong communication, problem-solving skills, and a collaborative mindset, committed to continuous professional growth.",
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "raiyan-ur-rehman-khan-286824370",
+        "url": "https://www.linkedin.com/in/raiyan-ur-rehman-khan-286824370",
+        "icon": "linkedin"
+      },
+      {
+        "network": "GitHub",
+        "username": "raiyanurrehmankhan-stack",
+        "url": "https://github.com/raiyanurrehmankhan-stack",
+        "icon": "github"
+      }
+    ]
+  },
+  "about": {
+    "intro": [
+      "I am a BSCS student interested in cybersecurity and digital marketing. I am currently developing my technical foundation through computer science while building practical skills in digital marketing, social media, paid advertising, and content creation."
+    ],
+    "strengths": [
+      "Digital Marketing & Paid Ad Strategy (Meta Ads Manager)",
+      "Social Media Marketing & Content Creation",
+      "Cybersecurity Foundations & Technical Problem Solving",
+      "Customer Communication & Support Workflows"
+    ]
+  },
+  "skills": [
+    {
+      "category": "Digital Marketing",
+      "slug": "digital-marketing",
+      "description": "Practical skills in online marketing, campaign management, paid advertising, and content creation.",
+      "items": [
+        {
+          "name": "Digital Marketing",
+          "tagline": "Online Strategy & Market Outreach",
+          "origin": "Internship & Practice",
+          "icon": "trending-up",
+          "details": [
+            "Campaign Planning & Execution",
+            "Audience Targeting & Funnels",
+            "Performance Analysis & Optimization"
+          ]
+        },
+        {
+          "name": "Meta Ads Manager",
+          "tagline": "Paid Ad Campaigns & Audience Targeting",
+          "origin": "Hands-on Practice",
+          "icon": "target",
+          "details": [
+            "Ad Set & Budget Configuration",
+            "Demographic & Interest Targeting",
+            "Ad Placement & Creative Testing"
+          ]
+        },
+        {
+          "name": "Social Media Marketing",
+          "tagline": "Brand Engagement & Presence Building",
+          "origin": "Practical Work",
+          "icon": "share-2",
+          "details": [
+            "Platform Content Scheduling",
+            "Audience Engagement & Growth",
+            "Brand Consistency & Positioning"
+          ]
+        },
+        {
+          "name": "Paid Advertising",
+          "tagline": "Paid Media Strategy & Conversion Focus",
+          "origin": "Practical Work",
+          "icon": "dollar-sign",
+          "details": [
+            "PPC & Paid Social Campaigns",
+            "Budget Allocation & Cost per Click",
+            "Conversion Tracking & Optimization"
+          ]
+        },
+        {
+          "name": "Content Creation",
+          "tagline": "Engaging Visual & Written Media",
+          "origin": "Creative Practice",
+          "icon": "pen-tool",
+          "details": [
+            "Visual Asset Design & Layouts",
+            "Marketing Copy & Captions",
+            "Digital Storytelling & Media Formats"
+          ]
+        },
+        {
+          "name": "Email Marketing",
+          "tagline": "Direct Outreach & Subscriber Retention",
+          "origin": "Practical Work",
+          "icon": "mail",
+          "details": [
+            "Email Campaign Crafting",
+            "Audience Segmentation Basics",
+            "Call-to-Action & Click-Through Optimization"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Other Skills",
+      "slug": "other-skills",
+      "description": "Creative design tools, productivity software suites, and commercial sales capabilities.",
+      "items": [
+        {
+          "name": "Canva",
+          "tagline": "Visual Graphic & Asset Design",
+          "origin": "Design Tool",
+          "icon": "palette",
+          "details": [
+            "Social Media Post & Banner Graphics",
+            "Marketing Collateral & Presentations",
+            "Brand Asset Creation & Templates"
+          ]
+        },
+        {
+          "name": "MS Office",
+          "tagline": "Document, Spreadsheet & Slide Productivity",
+          "origin": "Daily Practice",
+          "icon": "file-spreadsheet",
+          "details": [
+            "Word Document Structuring",
+            "Excel Data Organization & Tables",
+            "PowerPoint Deck Creation"
+          ]
+        },
+        {
+          "name": "Sales",
+          "tagline": "Customer Engagement & Value Communication",
+          "origin": "Professional Experience",
+          "icon": "shopping-bag",
+          "details": [
+            "Customer Communication & Active Listening",
+            "Product Value Articulation",
+            "Client Relationship Management"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Programming Languages",
+      "slug": "programming",
+      "description": "Core computer science fundamentals and programming concepts being developed through BSCS studies.",
+      "items": [
+        {
+          "name": "Currently Learning",
+          "tagline": "BSCS Computer Science Curriculum",
+          "origin": "Academic Foundation",
+          "icon": "code-2",
+          "details": [
+            "Programming Fundamentals & Syntax",
+            "Computational Logic & Flow",
+            "Algorithmic Thinking & Study"
+          ]
+        }
+      ]
+    }
+  ],
+  "work": [
+    {
+      "position": "Chat Support",
+      "company": "Customer Support Services",
+      "duration": "8+ Months",
+      "summary": "Delivered real-time chat support, resolving customer inquiries, providing product guidance, and ensuring responsive customer satisfaction."
+    },
+    {
+      "position": "Digital Marketing Intern",
+      "company": "Digital Marketing Internship",
+      "duration": "3 Months",
+      "summary": "Contributed to digital marketing initiatives, social media management, campaign creative coordination, and paid ad assistance."
+    }
+  ],
+  "certificates": [
+    {
+      "name": "Fundamentals of Cybersecurity",
+      "status": "Certificate available",
+      "icon": "shield-check"
+    },
+    {
+      "name": "Digital Marketing Internship",
+      "status": "Certificate available",
+      "icon": "award"
+    }
+  ],
+  "education": [
+    {
+      "institution": "Government Degree College Gulistan-e-Jauhar",
+      "studyType": "Intermediate",
+      "startDate": "2023-01-01",
+      "endDate": "2025-12-01"
+    },
+    {
+      "institution": "Karachi Public School",
+      "studyType": "Matriculation",
+      "startDate": "2015-01-01",
+      "endDate": "2023-12-01"
+    }
+  ],
+  "languages": [
+    {
+      "language": "English"
+    },
+    {
+      "language": "Urdu"
+    }
+  ]
+};
