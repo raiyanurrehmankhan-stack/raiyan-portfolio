@@ -28,6 +28,7 @@ function renderPortfolio(data) {
         renderHero(data.basics);
         renderAbout(data.basics, data.about);
         setupSkillsSystem(data.skills);
+        renderProjects(data.projects || []);
         renderExperience(data.work);
         renderEducation(data.education);
         renderCertificates(data.certificates);
@@ -310,6 +311,83 @@ function createSkillCardHtml(item, categorySlug) {
 }
 
 // 5. Work Experience Timeline
+
+// Featured projects: each title is a real link with an accessible hover/focus preview.
+function renderProjects(projects) {
+    const container = document.getElementById('projects-content');
+    if (!container) return;
+
+    if (!Array.isArray(projects) || projects.length === 0) {
+        container.innerHTML = '<p class="projects-empty glass">Projects will appear here soon.</p>';
+        return;
+    }
+
+    container.innerHTML = projects.map((project, index) => {
+        const name = escapeProjectText(project.name || `Project ${index + 1}`);
+        const description = escapeProjectText(project.description || 'Project description coming soon.');
+        const url = safeProjectUrl(project.url);
+        const image = safeProjectImage(project.image);
+        const tags = Array.isArray(project.tags) ? project.tags : [];
+        const tagMarkup = tags.map(tag => `<span class="project-tag">${escapeProjectText(tag)}</span>`).join('');
+        const previewMedia = image
+            ? `<img src="${image}" alt="${name} project preview" loading="lazy">`
+            : '<div class="project-preview-placeholder" aria-hidden="true"><i data-lucide="layers"></i></div>';
+
+        return `
+            <article class="project-item">
+                <a class="project-link" href="${url}" target="_blank" rel="noopener noreferrer" aria-describedby="project-preview-${index}">
+                    ${name}<i data-lucide="external-link" style="width:15px;height:15px"></i>
+                </a>
+                <p class="project-summary">${description}</p>
+                ${tagMarkup ? `<div class="project-tags">${tagMarkup}</div>` : ''}
+                <div class="project-preview" id="project-preview-${index}" role="tooltip">
+                    ${previewMedia}
+                    <h3>${name}</h3>
+                    <p>${description}</p>
+                    <span class="project-preview-cta">Open project ↗</span>
+                </div>
+            </article>`;
+    }).join('');
+
+    // On touch screens, tap the project card to reveal its preview; the link remains usable.
+    container.querySelectorAll('.project-item').forEach(item => {
+        item.addEventListener('click', event => {
+            if (window.matchMedia('(max-width: 650px)').matches && !event.target.closest('a')) {
+                item.classList.toggle('preview-open');
+            }
+        });
+    });
+
+    if (window.lucide && typeof window.lucide.createIcons === 'function') {
+        window.lucide.createIcons();
+    }
+}
+
+function escapeProjectText(value) {
+    return String(value).replace(/[&<>"']/g, char => ({
+        '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+    }[char]));
+}
+
+function safeProjectUrl(value) {
+    try {
+        const url = new URL(value || '#', window.location.href);
+        return ['http:', 'https:', 'mailto:'].includes(url.protocol) ? escapeProjectText(url.href) : '#';
+    } catch (_) {
+        return '#';
+    }
+}
+
+function safeProjectImage(value) {
+    if (!value) return '';
+    try {
+        const url = new URL(value, window.location.href);
+        return ['http:', 'https:'].includes(url.protocol) ? escapeProjectText(url.href) : '';
+    } catch (_) {
+        return '';
+    }
+}
+
 function renderExperience(work) {
     const experienceTimeline = document.getElementById('experience-timeline');
     if (!experienceTimeline || !work) return;
