@@ -172,6 +172,18 @@ const portfolioData = {
       ]
     }
   ],
+  "projects": [
+    {
+      "name": "Focus Nest",
+      "description": "A productivity and focus-management web app designed to help users organize tasks, run focused work sessions, and track their progress.",
+      "url": "https://focus-nestt-red.vercel.app/",
+      "tags": [
+        "Productivity",
+        "Focus Management",
+        "Web App"
+      ]
+    }
+  ],
   "work": [
     {
       "position": "Chat Support",
